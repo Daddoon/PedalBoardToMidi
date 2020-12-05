@@ -86,7 +86,19 @@ Actually you just have to match your Key ordering to the related PIN number, and
 
 - The second part of the work is to wire all your **second metal rods** to the ground (**GND**). So you should find one or some **GND** PINs on your Teensy 3.5 card, and connect all you wire to them through your Breadboard. I don't have a look to them at the time i'm writing this, but you should have a kind of dedicated range of hole on your Breadboard that connect all positives or negatives together vertically. I can't verify now, but if i'm not mistaken, you should connect all possible second metal rods to any **V-** hole. Then one of the available **V-** hole must be connected with a wire to a **GND** pin hole, so as you have pined your Teensy on the Breadboard, it should be the first horizontal available hole next to the **GND** pin of your card.
 
-- Connect your Teensy 3.5 card with a micro-USB cable: You MIDI instrument should works !
+## Building your code
+
+There is surely some missing bits in this source-code and the current configuration.
+**VisualMicro should not be mandatory** even if used for compilation on this published source code.
+
+At least the minimum required tools for building are:
+
+- The Arduino IDE environment installation
+- The Teensyduino library installation - [downloadable here](https://www.pjrc.com/teensy/td_download.html)
+- The **PedalBoardToMidi.ino** and **name.c** files content in your project.
+- Additionnaly, your Teensy card must be built with a **MIDI USB** profile, or **MIDI HID** don't remember the name exactly. According to some properties in the **vcxproj** file, the last profile i used seemed to be named **midi4**.
+
+- Connect your Teensy 3.5 card with a micro-USB cable and build your code: You MIDI instrument should be working !
   
 ## Changing the MIDI device name
 
